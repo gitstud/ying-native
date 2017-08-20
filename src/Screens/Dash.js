@@ -552,9 +552,11 @@ export default class Dash extends Component {
         {newList && this.renderNewListModal()}
         {openList && this.renderListModal()}
         {listTitles.map((value, i) => (
-          <TouchableOpacity key={i} onPress={() => this.openList(listTitles[i])} >
-            <Text style={{color: 'white', fontSize: 18, paddingTop: 4, paddingBottom: 4}}>{value.title}</Text>
-          </TouchableOpacity>
+          <View style={{paddingTop: 4, paddingBottom: 4, width: '90%', marginTop: 4, marginBottom: 4, backgroundColor: 'white'}}>
+            <TouchableOpacity key={i} onPress={() => this.openList(listTitles[i])} >
+                <Text style={{fontSize: 18, textAlign: 'center'}}>{value.title}</Text>
+            </TouchableOpacity>
+          </View>
         ))}
         <Button
           onPress={() => this.setState({ newList: true })}
