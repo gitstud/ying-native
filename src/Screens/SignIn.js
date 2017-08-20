@@ -97,6 +97,7 @@ export default class SignIn extends Component {
   }
 
   render() {
+    const { navigate } = this.props.navigation;
     return (
       <View style={styles.container}>
         <Text style={styles.title}>Task Manager APP</Text>
